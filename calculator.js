@@ -30,3 +30,17 @@ document.getElementById("multiply").addEventListener("click", function () {
   const result = multiply(number1, number2);
   document.getElementById("calculation-result").textContent = result;
 });
+
+function divide(number1, number2) {
+  if (number2 === 0) {
+    return "Error: Division by zero";
+  }
+  return number1 / number2;
+}
+
+document.getElementById("divide").addEventListener("click", function () {
+  const number1 = parseFloat(document.getElementById("number1").value) || 0;
+  const number2 = parseFloat(document.getElementById("number2").value) || 0;
+  const result = divide(number1, number2);
+  document.getElementById("calculation-result").textContent = result;
+});
